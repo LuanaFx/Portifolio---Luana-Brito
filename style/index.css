@@ -1,0 +1,83 @@
+.navbar {
+  width: 100%;
+  height: 10%;
+  background-color: #0d1b2a;
+}
+
+.navbar .content-navbar {
+  float: right;
+  margin: 2% 10% 0 0;
+}
+
+.navbar .content-navbar li {
+  list-style: none;
+  display: inline;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #e0e1dd;
+  margin-right: 40px;
+  letter-spacing: 5px;
+}
+
+.navbar .content-navbar li:hover {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  cursor: pointer;
+  font-weight: 200;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  height: 80%;
+  background: #0d1b2a fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.main::before {
+  content: '';
+  height: 40%;
+  width: 100%;
+  background-color: aliceblue;
+  position: absolute;
+  bottom: -50%;
+  left: -20%;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: skewY(10deg);
+          transform: skewY(10deg);
+}
+
+.main::after {
+  content: '';
+  height: 40%;
+  width: 100%;
+  background-color: aliceblue;
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+}
+
+.main .avatar-gif {
+  background: #0d1b2a url("../images/gif/luana.gif") no-repeat center top;
+  height: 80%;
+  width: 30%;
+  border-radius: 80%;
+  margin: 0 10%;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,29 @@
+$main-color: #0d1b2a;
+$font-color:#e0e1dd;
+$navbar-section:'navbar';
+$navbar-content:'content-navbar';
+.#{$navbar-section}{
+  width: 100%;
+  height: 10%;
+  background-color: $main-color;
+  .#{$navbar-content}{
+    float: right;
+    margin:2% 10% 0 0;
+    
+    li{
+      list-style: none;
+      display: inline;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+      color: $font-color;
+      margin-right: 40px;
+      letter-spacing: 5px;
+      &:hover{
+        transform: scale(1.8);
+        cursor: pointer;
+        font-weight: 200;
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,52 @@
+$main-color: #0d1b2a;
+$main-section:'main';
+$avatar-section:'avatar-gif';
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+.#{$main-section}{
+  width: 100%;
+  height: 80%;
+  background: $main-color fixed;
+  position: relative;
+  overflow: hidden;
+  
+  &::before{
+    content: '';
+    height: 40%;
+    width: 100%;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    transform-origin: right;
+    transform:skewY(10deg);
+  }
+  &::after{
+    content: '';
+    height: 40%;
+    width: 100%;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: -50%;
+    right: -20%;
+    transform-origin: left;
+    transform:skewY(-10deg);
+
+  }
+  .#{$avatar-section}{
+    background:  $main-color url("../images/gif/luana.gif") no-repeat center top;
+    height: 80%;
+    width: 30%;
+    border-radius: 80%;
+    margin: 0 10%;
+    
+  }
+  
+}
