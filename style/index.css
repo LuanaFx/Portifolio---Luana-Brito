@@ -1,7 +1,6 @@
 .navbar {
   width: 100%;
   height: 10%;
-  background-color: #0d1b2a;
 }
 
 .navbar .content-navbar {
@@ -26,6 +25,24 @@
   font-weight: 200;
 }
 
+@-webkit-keyframes digitacao {
+  0% {
+    border-right: 1px solid #fefae0;
+  }
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+
+@keyframes digitacao {
+  0% {
+    border-right: 1px solid #fefae0;
+  }
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -35,12 +52,13 @@ body {
   height: 100vh;
   width: 100%;
   margin: 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#8C366C), to(#6E64E7));
+  background-image: linear-gradient(to bottom right, #8C366C, #6E64E7);
 }
 
 .main {
   width: 100%;
   height: 80%;
-  background: #0d1b2a fixed;
   position: relative;
   overflow: hidden;
 }
@@ -74,10 +92,67 @@ body {
 }
 
 .main .avatar-gif {
-  background: #0d1b2a url("../images/gif/luana.gif") no-repeat center top;
+  background: url("../images/gif/luana.gif") no-repeat center top;
   height: 80%;
   width: 30%;
   border-radius: 80%;
-  margin: 0 10%;
+  margin: 0 20%;
+}
+
+.main .tittle-apresentation {
+  color: antiquewhite;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  -webkit-animation-name: digitacao;
+          animation-name: digitacao;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.main .informations {
+  position: absolute;
+  right: 23%;
+  top: 60%;
+  width: 25%;
+  height: 5%;
+}
+
+.main .informations a {
+  background-color: rgba(58, 12, 163, 0.5);
+  padding: 3% 8%;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 4%;
+  color: #f0e6ef;
+  z-index: -1;
+}
+
+.main .informations a:first-of-type {
+  margin-right: 8%;
+}
+
+.main .informations a::before {
+  width: 0;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+.main .informations a a:hover::before {
+  height: 375%;
+  cursor: pointer;
+}
+
+.projects {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
 }
 /*# sourceMappingURL=index.css.map */

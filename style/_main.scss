@@ -1,6 +1,12 @@
 $main-color: #0d1b2a;
 $main-section:'main';
 $avatar-section:'avatar-gif';
+$tittle-section:'tittle-apresentation';
+$information-section:'informations';
+@keyframes digitacao {
+ 0%{ border-right: 1px solid #fefae0;}
+  100% {border-right: 1px solid transparent}
+}
 *{
   padding: 0;
   margin: 0;
@@ -9,11 +15,11 @@ body{
   height: 100vh;
   width: 100%;
   margin: 0;
+  background-image: linear-gradient(to bottom right, #8C366C, #6E64E7);
 }
 .#{$main-section}{
   width: 100%;
   height: 80%;
-  background: $main-color fixed;
   position: relative;
   overflow: hidden;
   
@@ -41,12 +47,52 @@ body{
 
   }
   .#{$avatar-section}{
-    background:  $main-color url("../images/gif/luana.gif") no-repeat center top;
+    background:  url("../images/gif/luana.gif") no-repeat center top;
     height: 80%;
     width: 30%;
     border-radius: 80%;
-    margin: 0 10%;
-    
+    margin: 0 20%;
   }
-  
+  .#{$tittle-section}{
+    color: antiquewhite;
+    position: absolute;
+    right: 30%;
+    top: 40%;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    animation-name: digitacao;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+  }
+  .#{$information-section}{
+    position: absolute;
+    right: 23%;
+    top: 60%;
+    width: 25%;
+    height:5% ;
+    a{
+      background-color:rgba(58, 12, 163, 0.5) ;
+     padding: 3% 8%;
+      border:none;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 4%;
+      color:rgba(240, 230, 239, 1);
+      z-index: -1;
+      &:first-of-type {
+        margin-right: 8%;
+      }
+      &::before{
+        width: 0;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+      }
+      a:hover::before{
+        height: 375%;
+        cursor: pointer;
+      }
+   
+    }
+  }
 }
